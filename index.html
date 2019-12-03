@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/css.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!--로딩이미지-->
+    <div class="loading">
+            <div class="load">
+                <img src="./images/giftu.png" alt="로딩이미지">
+                <span>LOADING . . .</span>
+            </div>
+        </div>
+        <script>
+            /*로딩화면*/
+            setTimeout(function(){
+                document.querySelector(".loading").classList.add("big");
+            }, 1000);
+            setTimeout(function(){
+                document.querySelector(".loading").style.display="none";
+                document.querySelector("#content").style.display="block";
+                document.querySelector("#header").style.display="block";
+            },1500);
+            /*//로딩화면*/
+        </script>
+    <!--//로딩이미지-->
+    <div id="container">
+        <!--헤더-->
+        <div id="header">
+            <div id="headerinner">
+                <a href="" id="logo"><img src="./images/logo.png" alt="logo" title="로고"></a>
+                <nav>
+                    <ul class="gnb" id="gnb">
+                        <li>
+                            <a href="#container" id="main">MAIN</a>
+                        </li>
+                        <li>
+                            <a href="#profile">PROFILE</a>
+                        </li>
+                        <li>
+                            <a href="#port">PORTFOLIO</a>
+                        </li>
+                        <li>
+                            <a href="#footer">CONTACT</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <script>
+                window.addEventListener('scroll', function(){
+                var header = document.querySelector("#header");
+
+                var main = document.querySelector(".gnb>li:nth-child(1)>a");
+                var profile = document.querySelector(".gnb>li:nth-child(2)>a");
+                 var port = document.querySelector(".gnb>li:nth-child(3)>a");
+
+
+                if(window.scrollY > 0 && window.scrollY <= 840){
+                    main.classList.add("bold");}
+                    
+                
+                if(window.scrollY > 841 && window.scrollY <= 1600){
+                    header.classList.add("yellow");
+
+                    main.classList.remove("bold");
+                    profile.classList.add("bold");
+                }else if(window.scrollY <= 841){
+                    profile.classList.remove("bold");
+                    header.classList.remove("yellow");
+                }
+
+                if(window.scrollY > 1600) {
+                        profile.classList.remove("bold");
+                        port.classList.add("bold");
+                }else{
+                    port.classList.remove("bold");
+                }
+            });
+            </script>
+        </div>
+        <!--//헤더-->
+        <div id="content">
+            <!--메인페이지-->
+            <div class="until">
+                    <a href="https://github.com/ebona692" target="_blank"><img src="./images/icon_g.png" alt="github" title="깃허브"></a>
+            </div>
+            <div class="visual_main" id="main">
+                <div id="intro">
+                    <span>안녕하세요.</span>
+                    <div class="typingbox">
+                            <div class="typingtxt">
+                                <ul>
+                                    <li>신입 웹 퍼블리셔</li>
+                                    <li>나다희입니다.</li>
+                                </ul>
+                            </div>
+                            <div class="typing">
+                                <ul>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                    </div>
+                    <span>배움을 멈추지 않고</span><br>
+                    <span>계속 나아가겠습니다.</span>
+                    <button class="btn1 mg30"><a href="https://www.jobkorea.co.kr/User/Resume/View?rNo=17025296" target="_blank">이력서 바로 보기</a></button>
+                </div>
+            </div>
+            <!--//메인페이지-->
+            <div class="line"></div>
+            <!--프로필-->
+            <div id="profile">
+                <div class="prfheader">
+                    <h1>PROFILE</h1>
+                    <span>Any way the wind blows doesn’t really matter to me.</span>
+                </div>
+                <div class="info">
+                <img src="./images/chara.png" alt="mycharacter" title="아바타">
+                <p>1994년생<br>연세직업전문학교 수료<br>수원 거주중</p>
+                </div>
+                <div class="prfbox mg20">
+                    <ul>
+                        <li>
+                            <h1>01</h1>
+                            <img src="./images/point1.png" alt="point" title="성격">
+                        </li>
+                        <li>
+                            <h1>02</h1>
+                            <img src="./images/point2.png" alt="point" title="성격">
+                        </li>
+                        <li>
+                             <h1>03</h1>
+                             <img src="./images/point3.png" alt="point" title="성격">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--//프로필-->
+            <div id="skills" class="mg30">
+                <div class="box1">
+                    <img src="./images/skill.png" alt="">
+                    <div>
+                        <div class="skillbox">
+                            <span class="name">Html</span>
+                            <div class="percent">
+                                <div class="progress" style="width:90%"></div>
+                            </div>
+                            <span class="value">90%</span>
+                        </div>
+                        <div class="skillbox">
+                            <span class="name">CSS</span>
+                            <div class="percent">
+                                <div class="progress" style="width:95%"></div>
+                            </div>
+                            <span class="value">95%</span>
+                        </div>
+                        <div class="skillbox">
+                            <span class="name">Javascript</span>
+                            <div class="percent">
+                                <div class="progress" style="width:70%"></div>
+                            </div>
+                            <span class="value">70%</span>
+                        </div>
+                        <div class="skillbox">
+                            <span class="name">JQuery</span>
+                            <div class="percent">
+                                <div class="progress" style="width:70%"></div>
+                            </div>
+                            <span class="value">70%</span>
+                        </div>
+                        <div class="skillbox">
+                                <span class="name">Photoshop</span>
+                                <div class="percent">
+                                    <div class="progress" style="width:80%"></div>
+                                </div>
+                                <span class="value">80%</span>
+                        </div>
+                        <div class="skillbox">
+                                <span class="name">Illustrator</span>
+                                <div class="percent">
+                                    <div class="progress" style="width:70%"></div>
+                                </div>
+                                <span class="value">70%</span>
+                        </div>
+                    </div>
+                    <p>저는 시맨틱 태그와 웹표준의 중요성을 알고 있으며 이를 준수하기 위해 계속 공부 중입니다.</p>
+                    <p>저는 Javascript를 능숙하게 다루는 게 2020년 목표입니다!</p>
+                </div>
+            </div>
+            <!--//스킬-->
+            <div id="port">
+                <h1>PORTFOLIO</h1>
+                <div class="flexbox">
+                    <ul>
+                        <li style="background:url(./images/port_a.png)">
+                            <div class="view">
+                                <h2>Practice Site</h2>
+                                <div class="viewinner mg20">
+                                    짜임새 있는 노드 연습<br>
+                                    ul li 구조의 이해<br>
+                                    Javascript;<br>
+                                    JQuery;
+                                </div>
+                                <a href="https://ebona692.github.io/issactoast_pf/" target="_blank">살펴보기</a>
+                            </div>
+                        </li>
+                        <li style="background:url(./images/port_b.png)">
+                            <div class="view">
+                                    <h2>Practice Site</h2>
+                                    <div class="viewinner mg20">
+                                        짜임새 있는 노드 연습<br>
+                                        ul li 구조의 이해<br>
+                                        Javascript;<br>
+                                        JQuery;
+                                    </div>
+                                    <a href="https://ebona692.github.io/gongcha_port/" target="_blank">살펴보기</a>
+                            </div>
+                        </li>
+                        <li style="background:url(./images/prologo.png) no-repeat; background-size:100px 100px; background-position:50%">
+                            <div class="view">
+                                    <h2>개인 작업물</h2>
+                                    <div class="viewinner mg20">
+                                        여름바다에서 열리는 축제!<br>
+                                        포토샵, 일러스트 활용 <br>
+                                       현재 구축 중입니다. :D
+                                    </div>
+                                    <a href="#">살펴보기</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="view">
+                                    <div class="viewinner mg20">
+                                       현재 준비 중입니다. :D
+                                    </div>
+                                    <a href="#">살펴보기</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="view">
+                                    <div class="viewinner mg20">
+                                        현재 준비 중입니다. :D
+                                    </div>
+                                    <a href="#">살펴보기</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="view">
+                                    <div class="viewinner mg20">
+                                        현재 준비 중입니다. :D
+                                    </div>
+                                    <a href="#">살펴보기</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="more">
+                    <img src="./images/exit.png" alt="more" title="더보기" onclick="exit()" id="exit">
+                    <img src="./images/more.png" alt="more" title="더보기" onclick="more()" id="more">
+                </div>
+                <script>
+                    function more(){
+                        var more = document.querySelector("#more");
+                        document.querySelector(".flexbox").style.height="auto";
+                        more.style.display='none';
+                    }
+
+                    function exit(){
+                        var more = document.querySelector("#more");
+                        var exit = document.querySelector("#exit");
+                        document.querySelector(".flexbox").style.height="430px";
+                        more.style.display='block';
+                    }
+
+                </script>
+            </div>
+            <!--//포트폴리오-->
+            <div id="footer">
+                <ul>
+                    <li>제 포트폴리오 사이트를 봐주셔서 감사합니다!</li>
+                    <li>email :: ebona692@gmail.com</li>
+                    <li>number :: 010-8742-9475</li>
+                    <li>© NADAHEE 2019. All rights reserved</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        var typingBool = false; 
+        var typingIdx=0; 
+        var liIndex = 0;
+        var liLength = $(".typingtxt>ul>li").length;
+
+        var typingTxt = $(".typingtxt>ul>li").eq(liIndex).text(); 
+
+        typingTxt=typingTxt.split("");
+
+        if(typingBool==false){
+            typingBool=true; 
+            var tyInt = setInterval(typing,100);
+        } 
+            
+        function typing(){ 
+        $(".typing ul li").removeClass("on");
+        $(".typing ul li").eq(liIndex).addClass("on");
+        
+        if(typingIdx<typingTxt.length){
+            $(".typing ul li").eq(liIndex).append(typingTxt[typingIdx]);
+            typingIdx++; 
+        } else{
+            if(liIndex<liLength-1){
+            liIndex++; 
+                typingIdx=0;
+                typingBool = false; 
+                typingTxt = $(".typingtxt>ul>li").eq(liIndex).text(); 
+               
+                clearInterval(tyInt);
+            
+                setTimeout(function(){
+                tyInt = setInterval(typing,100);
+                },1000);
+                }    
+            } 
+        }
+    </script>
+</body>
+</html>
